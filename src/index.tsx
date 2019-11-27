@@ -1,17 +1,17 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import { SWRConfig } from "swr"
-import CssBaseline from "@material-ui/core/CssBaseline"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import "typeface-roboto"
+import CssBaseline from '@material-ui/core/CssBaseline'
 
-import App from "./App"
-import { swrConfig } from "./swrConfig"
+import { App } from './App'
+
+import 'typeface-roboto'
 
 ReactDOM.render(
-  <SWRConfig value={swrConfig}>
-    <CssBaseline />
-    <App />
-  </SWRConfig>,
-  document.getElementById("root")
+    <Router>
+        <CssBaseline />
+        <App />
+    </Router>,
+    document.getElementById('root')
 )
