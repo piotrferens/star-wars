@@ -15,7 +15,7 @@ const dispatchMock: React.Dispatch<Action> = () => {}
 const GameStateContext = React.createContext(initialState)
 const GameContextDispatch = React.createContext(dispatchMock)
 
-type Resource = 'people' | 'starships'
+export type Resource = 'people' | 'starships'
 
 type Action =
     | { type: 'INCREMENT_LEFT_SIDE_WINS'; payload: Resource }

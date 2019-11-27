@@ -32,6 +32,7 @@ interface Props {
 
 export function ResourceCard({ title, src, path }: Props) {
     const classes = useStyles()
+
     return (
         <Grid item xs={12} md={4}>
             <Card>

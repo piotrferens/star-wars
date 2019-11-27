@@ -2,10 +2,8 @@ import React, { useEffect } from 'react'
 
 import makeStyles from '@material-ui/styles/makeStyles'
 
-import { useGameDispatch, useGameState } from '../GameContext'
-
+import { useGameDispatch, useGameState, Resource } from '../GameContext'
 import { PlayCard } from './cards/PlayCard'
-
 import { getCardColor } from '../utils/getCardColor'
 
 const useStyles = makeStyles({
@@ -22,7 +20,7 @@ interface BattleArenaProps {
     opponentValue: string
     game: number
     winner: 'draw' | 'left' | 'right'
-    resource: 'people' | 'starships'
+    resource: Resource
 }
 
 export function BattleArena({
@@ -37,7 +35,6 @@ export function BattleArena({
     const classes = useStyles()
 
     const gameState = useGameState()
-
     const gameDispatch = useGameDispatch()
 
     const playerCardColor = getCardColor(winner, 'left')

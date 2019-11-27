@@ -14,8 +14,10 @@ const useStyles = makeStyles({
 
 export function BackButton() {
     const classes = useStyles()
+    const history = useHistory()
+
     return (
-        <Button onClick={useHistory().goBack} className={classes.button}>
+        <Button onClick={history.goBack} className={classes.button}>
             <ArrowBackIcon fontSize="large" />
         </Button>
     )

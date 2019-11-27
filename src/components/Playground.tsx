@@ -33,7 +33,6 @@ interface PlaygroundProps<T> {
 
 export function Playground<T>({ count, url, children, selectWinner }: PlaygroundProps<T>) {
     const classes = useStyles()
-
     const [numberOfGames, setNumberOfGames] = useState(0)
     const [resources, setResources] = useState(getUniqueRandomNumbers(count))
 
